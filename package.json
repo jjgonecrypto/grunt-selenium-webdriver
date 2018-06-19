@@ -27,10 +27,13 @@
     "node": ">= 0.10.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
-    "phantomjs": "~1.9.7-3"
+    "phantomjs": "~1.9.7-3",
+    "snyk": "^1.83.0"
   },
   "devDependencies": {
     "chai": "^1.9.1",
@@ -49,5 +52,6 @@
     "gruntplugin",
     "selenium",
     "phantom"
-  ]
+  ],
+  "snyk": true
 }
